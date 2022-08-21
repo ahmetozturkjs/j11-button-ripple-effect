@@ -1,0 +1,30 @@
+.btn{
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color: aqua;
+    width: 0;
+    height: 0;
+    left: var(--xuzak);
+    top: var(--yuzak);
+    transition: width 0.5s, height 0.5s;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.btn:hover::before{
+
+    width: 400px;
+    height: 400px;
+
+}
+
+.btn span{
+    z-index: 6;
+    color: black;
+    position: relative;
+}
